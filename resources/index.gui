@@ -1,0 +1,92 @@
+<svg>
+  <!-- Define a reusable tile to display a train -->
+  <symbol id="tile-train" focusable="false" pointer-events="visible"
+  system-events="all">
+    <rect id="train-background" height="102" />
+
+    <!-- line1: destination of the train -->
+    <text id="destination" font-size="50" x="5" y="55" fill="white">Name</text>
+
+    <!-- line 2: time in minutes, platform and bike or no bike icon -->
+    <text id="minutes"  x="5"   y="100" font-size="42" fill="white">42
+    minutes</text>
+    <text id="platform" x="100%-120" y="100" font-size="36" fill="grey">X</text>
+
+    <use id="bike" href="#static-image" x="100%-80" y="53" height="47"
+    width="80">
+      <set href="image" attributeName="href" to="nobike.png"/>
+      <set href="image" attributeName="load" to="async"/>
+    </use>
+
+    <rect id="tile-divider-bottom" height="2" />
+  </symbol>
+
+  <textarea id="status" class="status">status message to be displayed
+  here</textarea>
+
+  <use id="trainList" href="#tile-list" height="100%" width="100%">
+    <var id="reorder-enabled" value="0"/>
+    <var id="separator-height-bottom" value="2"/>
+
+    <use id="train-0" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-1" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-2" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-3" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-4" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-5" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-6" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-7" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-8" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-9" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-10" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-11" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-12" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-13" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-14" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-15" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-16" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-17" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-18" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+    <use id="train-19" href="#tile-list-item" class="item">
+      <use href="#tile-train" />
+    </use>
+  </use>
+</svg>

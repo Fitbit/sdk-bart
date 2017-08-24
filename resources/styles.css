@@ -1,0 +1,36 @@
+text     {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  y: 12;
+  text-length: 32;
+}
+
+textarea {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  y: 12;
+  text-length: 1024;
+}
+
+
+.item-header     { x: 0; y: 0; width: 100%; height: 25 }
+.item            { x: 0; y: 0; width: 100%; height: 117; }
+.item-footer     { x: 0; y: 0; width: 100%; height: 20; }
+
+.tile-divider-bottom {
+  fill: grey;
+}
+
+.status {
+  text-anchor: middle;
+  display-align: center;
+  x: 5%;
+  y: 5%;
+  width: 90%;
+  height: 90%;
+  text-length:512;
+  font-size: 32;
+  fill: white;
+}
