@@ -1,4 +1,4 @@
-function BartAPI(apiKey) {
+export function BartAPI(apiKey) {
   if (apiKey !== undefined) {
     this.apiKey = apiKey;
   }
