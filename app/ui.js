@@ -22,7 +22,7 @@ BartUI.prototype.updateUI = function(state, departures) {
 
   if (state === "loaded") {
     this.trainList.style.display = "inline";
-    this.statusText.innerText = "";
+    this.statusText.text = "";
 
     this.updateDepartureList(departures);
   }
@@ -30,13 +30,13 @@ BartUI.prototype.updateUI = function(state, departures) {
     this.trainList.style.display = "none";
 
     if (state === "loading") {
-      this.statusText.innerText = "Loading departures ...";
+      this.statusText.text = "Loading departures ...";
     }
     else if (state === "disconnected") {
-      this.statusText.innerText = "Please check connection to phone and Fitbit App"
+      this.statusText.text = "Please check connection to phone and Fitbit App"
     }
     else if (state === "error") {
-      this.statusText.innerText = "Something terrible happened.";
+      this.statusText.text = "Something terrible happened.";
     }
   }
 }
@@ -61,13 +61,13 @@ BartUI.prototype.updateDepartureList = function(departures) {
     tile.style.display = "inline";
     train.to = train.to.toLowerCase();
     if (train.to in STATIONS) {
-      tile.getElementById("destination").innerText = STATIONS[train.to];
+      tile.getElementById("destination").text = STATIONS[train.to];
     }
     else {
-      tile.getElementById("destination").innerText = train.to;
+      tile.getElementById("destination").text = train.to;
     }
-    tile.getElementById("platform").innerText = train.platform;
-    tile.getElementById("minutes").innerText = train.minutes + " minutes";
+    tile.getElementById("platform").text = train.platform;
+    tile.getElementById("minutes").text = train.minutes + " minutes";
     tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
   }
 }
