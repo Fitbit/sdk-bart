@@ -47,7 +47,7 @@ function sendBartSchedule() {
     }
   }
   console.log("Setting value: " + JSON.stringify(station));
-  
+
   if (!station || typeof(station) !== "object" || station.length < 1 || typeof(station[0]) !== "object") {
     station = { code: "embr", direction: "s" };
     console.log("No setting found - using default value of Embarcadero");
