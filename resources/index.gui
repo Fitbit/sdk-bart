@@ -2,20 +2,18 @@
   <!-- Define a reusable tile to display a train -->
   <symbol id="tile-train" focusable="false" pointer-events="visible"
   system-events="all">
-    <rect id="train-background" height="102" />
+    <rect id="train-background" height="100%" />
 
     <!-- line1: destination of the train -->
-    <text id="destination" font-size="50" x="5" y="55" fill="white">Name</text>
+    <text id="destination" font-size="40" x="5" y="40" fill="white">Name</text>
 
     <!-- line 2: time in minutes, platform and bike or no bike icon -->
-    <text id="minutes"  x="5"   y="100" font-size="42" fill="white">42
-    minutes</text>
-    <text id="platform" x="100%-120" y="100" font-size="36" fill="grey">X</text>
+    <text id="minutes"  x="5"   y="78" font-size="30" fill="white">42 minutes</text>
+    <text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text>
 
-    <use id="bike" href="#static-image" x="100%-80" y="53" height="47"
+    <use id="bike" href="#static-image" x="100%-84" y="37" height="47"
     width="80">
       <set href="image" attributeName="href" to="nobike.png"/>
-      <set href="image" attributeName="load" to="async"/>
     </use>
 
     <rect id="tile-divider-bottom" height="2" />

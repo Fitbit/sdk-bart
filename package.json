@@ -2,9 +2,19 @@
   "fitbit": {
     "appType": "app",
     "appDisplayName": "BART",
+    "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
     "requestedPermissions": [
       "access_internet"
-    ]
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "BART"
+      }
+    }
   }
 }

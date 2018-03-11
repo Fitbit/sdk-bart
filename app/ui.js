@@ -1,14 +1,13 @@
 import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
-
-let document = require("document");
+import document from "document";
 
 export function BartUI() {
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
 
   this.tiles = [];
-  for (var i = 0; i < TRAIN_COUNT; i++) {
-    var tile = document.getElementById(`train-${i}`);
+  for (let i = 0; i < TRAIN_COUNT; i++) {
+    let tile = document.getElementById(`train-${i}`);
     if (tile) {
       this.tiles.push(tile);
     }
@@ -16,10 +15,6 @@ export function BartUI() {
 }
 
 BartUI.prototype.updateUI = function(state, departures) {
-  console.log("updateUI(" + state + ", ["
-              + (typeof(departures)==="object" ? departures.length : "undef")
-              + "])");
-
   if (state === "loaded") {
     this.trainList.style.display = "inline";
     this.statusText.text = "";
@@ -43,20 +38,16 @@ BartUI.prototype.updateUI = function(state, departures) {
 
 BartUI.prototype.updateDepartureList = function(departures) {
   for (let i = 0; i < TRAIN_COUNT; i++) {
-    var tile = this.tiles[i];
+    let tile = this.tiles[i];
     if (!tile) {
-      console.log("no tile for index " + i);
       continue;
     }
 
     const train = departures[i];
     if (!train) {
-      console.log("no data for index " + i);
       tile.style.display = "none";
       continue;
     }
-
-    console.log("Setting data " + JSON.stringify(train) + " on  index " + i);
 
     tile.style.display = "inline";
     train.to = train.to.toLowerCase();
