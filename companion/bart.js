@@ -9,9 +9,9 @@ export function BartAPI(apiKey) {
 };
 
 BartAPI.prototype.realTimeDepartures = function(origin, direction) {
-  var self = this;
+  let self = this;
   return new Promise(function(resolve, reject) {
-    var url = "https://api.bart.gov/api/etd.aspx?json=y";
+    let url = "https://api.bart.gov/api/etd.aspx?json=y";
     url += "&key=" + self.apiKey;
     url += "&cmd=etd";
     url += "&orig=" + origin;
@@ -19,17 +19,16 @@ BartAPI.prototype.realTimeDepartures = function(origin, direction) {
       url += "&dir=" + direction;
     }
     fetch(url).then(function(response) {
-      console.log("Got response from server:", response);
       return response.json();
     }).then(function(json) {
       //console.log("Got JSON response from server:" + JSON.stringify(json));
 
-      var data = json["root"]["station"][0];
-      var departures = [];
+      let data = json["root"]["station"][0];
+      let departures = [];
 
       data["etd"].forEach( (destination) => {
         destination["estimate"].forEach( (train) => {
-          var d = {
+          let d = {
             "to": destination["abbreviation"],
             "minutes": Number.parseInt(train["minutes"]),
             "platform": train["platform"],
@@ -47,7 +46,6 @@ BartAPI.prototype.realTimeDepartures = function(origin, direction) {
 
       resolve(departures);
     }).catch(function (error) {
-      console.log("Fetching " + url + " failed: " + JSON.stringify(error));
       reject(error);
     });
   });

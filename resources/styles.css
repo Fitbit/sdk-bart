@@ -16,7 +16,7 @@ textarea {
 
 
 .item-header     { x: 0; y: 0; width: 100%; height: 25 }
-.item            { x: 0; y: 0; width: 100%; height: 117; }
+.item            { x: 0; y: 0; width: 100%; height: 33%; }
 .item-footer     { x: 0; y: 0; width: 100%; height: 20; }
 
 .tile-divider-bottom {
